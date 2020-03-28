@@ -1,0 +1,134 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS D:\VSCodeWorkspace\git-test> git init
+Initialized empty Git repository in D:/VSCodeWorkspace/git-test/.git/
+PS D:\VSCodeWorkspace\git-test> git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS D:\VSCodeWorkspace\git-test> git add .
+PS D:\VSCodeWorkspace\git-test> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+PS D:\VSCodeWorkspace\git-test> git commit -m 'Added index.html'
+[master (root-commit) a0758df] Added index.html
+ 1 file changed, 11 insertions(+)
+ create mode 100644 index.html
+PS D:\VSCodeWorkspace\git-test> git status
+On branch master
+nothing to commit, working tree clean
+PS D:\VSCodeWorkspace\git-test> git log --oneline
+a0758df (HEAD -> master) Added index.html
+PS D:\VSCodeWorkspace\git-test> git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        templates/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\VSCodeWorkspace\git-test> git add .
+PS D:\VSCodeWorkspace\git-test> git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+        new file:   templates/test.html
+
+PS D:\VSCodeWorkspace\git-test> git commit -m 'Added template directory and modified index.html'
+[master 9f4d7c8] Added template directory and modified index.html
+ 2 files changed, 13 insertions(+)
+ create mode 100644 templates/test.html
+PS D:\VSCodeWorkspace\git-test> git statu
+git: 'statu' is not a git command. See 'git --help'.
+
+The most similar commands are
+        status
+        stage
+        stash
+PS D:\VSCodeWorkspace\git-test> git status
+On branch master
+nothing to commit, working tree clean
+PS D:\VSCodeWorkspace\git-test> git log --oneline
+9f4d7c8 (HEAD -> master) Added template directory and modified index.html
+a0758df Added index.html
+PS D:\VSCodeWorkspace\git-test> git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\VSCodeWorkspace\git-test> git add .
+PS D:\VSCodeWorkspace\git-test> git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+PS D:\VSCodeWorkspace\git-test> git commit -m 'Modified index.html(2)'
+[master 2e6f0e1] Modified index.html(2)
+ 1 file changed, 1 insertion(+)
+PS D:\VSCodeWorkspace\git-test> git log
+commit 2e6f0e1301a1ba69f1ad9b560c1a842024636fe0 (HEAD -> master)
+Author: Murad1893 <muradmansoor189@gmail.com>
+Date:   Sat Mar 28 13:59:21 2020 +0500
+
+    Modified index.html(2)
+
+commit 9f4d7c809192cbbaaf8c7f0bb4b75a29d876a681
+Author: Murad1893 <muradmansoor189@gmail.com>
+Date:   Sat Mar 28 13:57:54 2020 +0500
+
+    Added template directory and modified index.html
+
+commit a0758dfa1b6b4505ee89762d2cdd9e7cc6a17f73
+Author: Murad1893 <muradmansoor189@gmail.com>
+Date:   Sat Mar 28 13:55:51 2020 +0500
+
+    Added index.html
+PS D:\VSCodeWorkspace\git-test> git log --oneline
+2e6f0e1 (HEAD -> master) Modified index.html(2)
+9f4d7c8 Added template directory and modified index.html
+a0758df Added index.html
+PS D:\VSCodeWorkspace\git-test> git checkout 9f4d7c8 index.html
+Updated 1 path from affd109
+PS D:\VSCodeWorkspace\git-test> git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+PS D:\VSCodeWorkspace\git-test> git reset HEAD index.html
+Unstaged changes after reset:
+M       index.html
+PS D:\VSCodeWorkspace\git-test> git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\VSCodeWorkspace\git-test> git checkout -- index.html
+PS D:\VSCodeWorkspace\git-test> git status
+On branch master
+nothing to commit, working tree clean
