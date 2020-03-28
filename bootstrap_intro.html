@@ -14,46 +14,50 @@
 
 <body>
 
-    <header>
-        <div>
-            <div>
-                <div>
+    <!-- Allows you to set apart the content inside it from the rest of the page-->
+    <header class='jumbotron'>
+        <div class='container'>
+            <div class="row">
+                <!-- this tells that for extra small it will occupy the whole div while for sm to xl sizes it will cover half of the screen hence declared as the second class -->
+                <div class="col-12 col-sm-6">
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div>
+                <!-- this tells that for extra small it will be stacked below the upper div and for small to xl this will take the remaining part of the container (remaining 6 cols) -->
+                <div class="col-12 col-sm">
                 </div>
             </div>
         </div>
     </header>
 
-    <div>
-        <div>
-            <div>
+    <div class='container'>
+        <div class='row'>
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
-            <div>
+            <!-- for small will take remaining 8 cols (12-4) and 9 for medium -->
+            <div class="col col-sm order-sm-first col-md">
                 <h2>Uthappizza</h2>
                 <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
             </div>
         </div>
 
 
-        <div>
-            <div>
+        <div class='row'>
+            <div class="col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
-            <div>
+            <div class="col col-sm col-md">
                 <h2>Weekend Grand Buffet</h2>
                 <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
             </div>
         </div>
 
-        <div>
-            <div>
+        <div class='row'>
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Meet our Culinary Specialists</h3>
             </div>
-            <div>
+            <div class="col col-sm order-sm-first col-md">
                 <h2>Alberto Somayya</h2>
                 <h4>Executive Chef</h4>
                 <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
@@ -61,10 +65,11 @@
         </div>
     </div>
 
-    <footer>
-        <div>
-            <div>             
-                <div>
+    <footer >
+        <div class="container">
+            <div class="row">       
+                <!-- this will push this 1 column to the right       -->
+                <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul>
                         <li><a href="#">Home</a></li>
@@ -73,7 +78,7 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="col-7 col-sm-5">
                     <h5>Our Address</h5>
                     <address>
 		              121, Clear Water Bay Road<br>
@@ -84,7 +89,7 @@
 		              Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
 		           </address>
                 </div>
-                <div>
+                <div class="col-12 col-sm-4">
                     <div>
                         <a href="http://google.com/+">Google+</a>
                         <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
@@ -95,8 +100,9 @@
                     </div>
                 </div>
            </div>
-           <div>             
-                <div>
+           <div class="row">   
+               <!-- this content will occupy as enough cols as required by this         -->
+                <div class="col-auto">
                     <p>© Copyright 2018 Ristorante Con Fusion</p>
                 </div>
            </div>
