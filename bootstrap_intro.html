@@ -9,6 +9,7 @@
  
      <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/styles.css">
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -17,7 +18,7 @@
     <!-- Allows you to set apart the content inside it from the rest of the page-->
     <header class='jumbotron'>
         <div class='container'>
-            <div class="row">
+            <div class="row row-header">
                 <!-- this tells that for extra small it will occupy the whole div while for sm to xl sizes it will cover half of the screen hence declared as the second class -->
                 <div class="col-12 col-sm-6">
                     <h1>Ristorante con Fusion</h1>
@@ -31,7 +32,8 @@
     </header>
 
     <div class='container'>
-        <div class='row'>
+        <!-- this align items wil align the content vertically -->
+        <div class='row row-content align-items-center'>
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
@@ -43,7 +45,7 @@
         </div>
 
 
-        <div class='row'>
+        <div class='row row-content align-items-center'>
             <div class="col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
@@ -53,7 +55,7 @@
             </div>
         </div>
 
-        <div class='row'>
+        <div class='row row-content align-items-center'>
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Meet our Culinary Specialists</h3>
             </div>
@@ -65,13 +67,14 @@
         </div>
     </div>
 
-    <footer >
+    <footer class="footer">
         <div class="container">
             <div class="row">       
                 <!-- this will push this 1 column to the right       -->
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
-                    <ul>
+                    <!-- list-unstyled: this will remove the bullets -->
+                    <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Menu</a></li>
@@ -80,7 +83,7 @@
                 </div>
                 <div class="col-7 col-sm-5">
                     <h5>Our Address</h5>
-                    <address>
+                    <address class="address">
 		              121, Clear Water Bay Road<br>
 		              Clear Water Bay, Kowloon<br>
 		              HONG KONG<br>
@@ -89,8 +92,10 @@
 		              Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
 		           </address>
                 </div>
-                <div class="col-12 col-sm-4">
-                    <div>
+                <!-- this will align the content to the center of the row. Vertically centered -->
+                <div class="col-12 col-sm-4 align-self-center">
+                    <!-- text-center: so that the text is centered -->
+                    <div class="text-center">
                         <a href="http://google.com/+">Google+</a>
                         <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
                         <a href="http://www.linkedin.com/in/">LinkedIn</a>
@@ -100,7 +105,8 @@
                     </div>
                 </div>
            </div>
-           <div class="row">   
+           <!-- horizontal alignment of the div component -->
+           <div class="row justify-content-center">   
                <!-- this content will occupy as enough cols as required by this         -->
                 <div class="col-auto">
                     <p>© Copyright 2018 Ristorante Con Fusion</p>
