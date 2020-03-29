@@ -20,23 +20,30 @@
     navbar-expand-sm : for small and extra small it will collapse
     bg-primary: primary blue bg color
     fixed-top : remains static when scrolling // we can also set this to bottom to fix it at bottom -->
-    <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
             <!-- this will toggle the navbar -->
-            data-toggle is a js component needed by boostrap to collapse the navbar
-            <button class="navbar-toggler" type="button" data-toggle="collapse"></button>
+            <!-- data-toggle is a js component needed by boostrap to collapse the navbar -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <!-- this will add a toggler button -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <!-- this can be company name that can be fixed to the navbar -->
-            <a class="navbar-brand" href="#">Ristorante con Fusion</a>
-            <!-- navbar-nav: that will help to define link and displayed horizontally -->
-            <!-- mr-auto: right margin setting (content pushed as left as possible) -->
-            <ul class="navbar-nav mr-auto">
-                <!-- nav-item: will allow to display horizontally
+            <a class="navbar-brand mr-auto" href="#">Ristorante con Fusion</a>
+            <!-- id is Navbar because the data-target was #Navbar and so this would be toggled in case of button -->
+            <div class="collapse navbar-collapse" id="Navbar">
+                <!-- navbar-nav: that will help to define link and displayed horizontally -->
+                <!-- mr-auto: right margin setting (content pushed as left as possible) -->
+                <ul class="navbar-nav mr-auto">
+                    <!-- nav-item: will allow to display horizontally
                     active: will set the item to highlighted-->
-                <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="./aboutus.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact </a></li>
-            </ul>
+                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact </a></li>
+                </ul>
+            </div>
+
         </div>
     </nav>
 
@@ -107,7 +114,7 @@
                     <!-- list-unstyled: this will remove the bullets -->
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="./aboutus.html">About</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
