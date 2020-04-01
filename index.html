@@ -31,7 +31,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- this can be company name that can be fixed to the navbar -->
-            <a class="navbar-brand mr-auto" href="#">Ristorante con Fusion</a>
+            <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41" alt=""></a>
             <!-- id is Navbar because the data-target was #Navbar and so this would be toggled in case of button -->
             <div class="collapse navbar-collapse" id="Navbar">
                 <!-- navbar-nav: that will help to define link and displayed horizontally -->
@@ -59,13 +59,14 @@
         <div class='container'>
             <div class="row row-header">
                 <!-- this tells that for extra small it will occupy the whole div while for sm to xl sizes it will cover half of the screen hence declared as the second class -->
-                <div class="col-12 col-sm-6">
+                <div class="col-12 col-sm-8 ">
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our
                         lipsmacking creations will tickle your culinary senses!</p>
                 </div>
                 <!-- this tells that for extra small it will be stacked below the upper div and for small to xl this will take the remaining part of the container (remaining 6 cols) -->
-                <div class="col-12 col-sm">
+                <div class="col-12 col-sm align-self-center">
+                    <img src="img/logo.png" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -79,9 +80,17 @@
             </div>
             <!-- for small will take remaining 8 cols (12-4) and 9 for medium -->
             <div class="col col-sm order-sm-first col-md">
-                <h2>Uthappizza</h2>
-                <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives,
-                    ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                <!-- adding a media object -->
+                <div class="media">
+                    <!-- to use img in media object we need to use some classes such as d=flex, and other image alignment properties -->
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="uthapizza">
+                    <div class="media-body">
+                        <!-- mt-0 will align the title to the top of the object here -->
+                        <h2 class="mt-0">Uthappizza</h2>
+                        <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives,
+                        ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -103,11 +112,16 @@
                 <h3>Meet our Culinary Specialists</h3>
             </div>
             <div class="col col-sm order-sm-first col-md">
-                <h2>Alberto Somayya</h2>
-                <h4>Executive Chef</h4>
-                <p>Award winning three-star Michelin chef with wide International experience having worked closely with
-                    whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion
-                    experiences. </p>
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png" alt="alberto">
+                    <div class="media-body">
+                        <h2 class="mt-0">Alberto Somayya</h2>
+                        <h4>Executive Chef</h4>
+                        <p>Award winning three-star Michelin chef with wide International experience having worked closely with
+                            whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion
+                            experiences. </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
