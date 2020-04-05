@@ -1,6 +1,7 @@
 $(document).ready(function(){
     //making the sliding action faster
   $('#mycarousel').carousel({interval: 2000});
+  $("#mycarousel").carousel('cycle');
     //activating the pause button
     //when the user clicks the pause button activate this action
   $('#carouselButton').click(function(){
