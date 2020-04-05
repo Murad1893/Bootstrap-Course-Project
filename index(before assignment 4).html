@@ -36,8 +36,8 @@
                 </ul>
                 <!-- adding a link to trigger the modal -->
                 <span class="navbar-text">
-                    <a id="loginButton">
-                      <span class="fa fa-sign-in"></span> Login
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
             </div>
@@ -177,7 +177,7 @@
                 <div class="col-12 col-sm align-self-center">
                   <!-- using the js component here and incorporating tooltip in it\
                   using the html tags to format the tooltip -->
-                  <a role="button" class="btn btn-block btn-warning" id="reserveButton">Reserve Table</a>
+                  <a role="button" class="btn btn-block btn-warning" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -371,16 +371,7 @@
                   $('#carouselButton').children('span').addClass('fa-pause')
                 }
             });
-          })
-
-          $('#reserveButton').click(function(){
-            $('#reserveModal').modal('show');
-          })
-
-          $('#loginButton').click(function(){
-            $('#loginModal').modal('show');
-          })
-         
+        })
     </script>
 </body>
 
